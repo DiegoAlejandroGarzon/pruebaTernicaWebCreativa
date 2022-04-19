@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">DahBoard</div>
+                <div class="card-header">DASHBOARD</div>
 
                 <div class="card-body">
                     <div id="reporteEstados" style="width: 100%;height: 400px;margin: 0;padding: 0;"></div>

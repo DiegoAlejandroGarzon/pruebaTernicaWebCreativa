@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//logout
+Route::get('/logout', 'HomeController@logout')->name('logoutt');
 
 Route::get('/', 'HomeController@index');
 

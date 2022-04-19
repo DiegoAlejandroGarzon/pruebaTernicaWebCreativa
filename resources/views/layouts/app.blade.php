@@ -52,41 +52,52 @@
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item card mr-1">
-                                <a class="nav-link" href="{{route('home')}}">
-                                    <i class="fas fa-fw fa-table"></i>
-                                    <span>DashBoard</span>
-                                </a>
-                            </li>
-                            <li class="nav-item card mr-1">
-                                <a class="nav-link" href="{{route('homeworkList')}}">
-                                    <i class="fas fa-fw fa-table"></i>
-                                    <span>Tabla de Tareas</span>
-                                </a>
-                            </li>
-                            <li class="nav-item card mr-1">
-                                <a class="nav-link" href="{{route('newHomework')}}">
-                                    <i class="fas fa-fw fa-table"></i>
-                                    <span>Nueva Tarea</span>
-                                </a>
-                            </li>
-                            <li class="nav-item dropdown card">
+                        
+                        <li class="nav-item card mr-1">
+                            <a class="nav-link" href="{{route('home')}}">
+                                <i class="fas fa-fw fa-table"></i>
+                                <span>DashBoard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item card mr-1">
+                            <a class="nav-link" href="{{route('homeworkList')}}">
+                                <i class="fas fa-fw fa-table"></i>
+                                <span>Tabla de Tareas</span>
+                            </a>
+                        </li>
+                        <li class="nav-item card mr-1">
+                            <a class="nav-link" href="{{route('newHomework')}}">
+                                <i class="fas fa-fw fa-table"></i>
+                                <span>Nueva Tarea</span>
+                            </a>
+                        </li>
+
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                {{ Auth::user()->nombre }}
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('logoutt') }}">
+                                        Logout
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                            {{-- <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->nombre }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+                                    
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
                                 </div>
-                            </li>
+                            </li> --}}
                         @endguest
                     </ul>
                 </div>
