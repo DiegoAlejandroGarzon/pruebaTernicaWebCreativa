@@ -21,4 +21,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/newHomework', 'HomeWorkController@newHomeworkView')->name('newHomework');
 Route::post('/newHomework', 'HomeWorkController@newHomework');
 Route::get('/homeworkList', 'HomeWorkController@homeworkListView')->name('homeworkList');
+Route::get('/homeworkListDataTable', 'HomeWorkController@homeworkListDataTable');
+Route::post('/updateHomework', 'HomeWorkController@updateHomework');
+Route::post('/homeWorkDelete', 'HomeWorkController@deleteHomework');
+Route::get('/reportStatus', 'HomeWorkController@reportStatus');
 

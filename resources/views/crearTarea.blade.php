@@ -15,7 +15,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="fechaInicio">Fecha de inicio</label><br>
-                            <input id="fechaInicio" name="fechaInicio" type="text" class="form-control" required>
+                            <input id="fechaInicio" name="fechaInicio" type="date" class="form-control" required>
                         </div>
                         <div class="mb-3">
                             <label for="fechaFin">Fecha de fin</label><br>
@@ -37,5 +37,8 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('scripts')
 <script type="text/javascript" src="{{asset('js/newHomeWork.js')}}"></script>
 @endsection
