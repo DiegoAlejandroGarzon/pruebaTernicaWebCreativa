@@ -18,23 +18,16 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -49,9 +42,27 @@
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item dropdown">
+                            <li class="nav-item card mr-1">
+                                <a class="nav-link" href="{{route('home')}}">
+                                    <i class="fas fa-fw fa-table"></i>
+                                    <span>DashBoard</span>
+                                </a>
+                            </li>
+                            <li class="nav-item card mr-1">
+                                <a class="nav-link" href="{{route('homeworkList')}}">
+                                    <i class="fas fa-fw fa-table"></i>
+                                    <span>Tabla de Tareas</span>
+                                </a>
+                            </li>
+                            <li class="nav-item card mr-1">
+                                <a class="nav-link" href="{{route('newHomework')}}">
+                                    <i class="fas fa-fw fa-table"></i>
+                                    <span>Nueva Tarea</span>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown card">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
+                                    {{ Auth::user()->nombre }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
